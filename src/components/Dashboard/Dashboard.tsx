@@ -1,11 +1,11 @@
 import UserCard from "../UserCard/UserCard";
-import TrackerCard from "../TrackerCard/TrackerCard";
+import TrackerList from "../TrackerList/TrackerList";
 
 const Dashboard = () => {
   return (
     <div>
       <UserCard />
-      <TrackerCard />
+      <TrackerList />
     </div>
   );
 };
