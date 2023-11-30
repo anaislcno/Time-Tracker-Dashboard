@@ -1,0 +1,39 @@
+.user-container {
+  margin: 50px 20px;
+  border-radius: 15px;
+  background-color: var(--dark-blue);
+}
+
+.user-infos {
+  background-color: var(--dark-violet);
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-infos__text h1 {
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.user-infos__text p {
+  font-size: 14px;
+  color: var(--pale-blue);
+}
+
+.user-infos__img {
+  height: 70px;
+  border: 3px solid white;
+  border-radius: 50%;
+}
+
+.timeline {
+  background-color: var(--dark-blue);
+  border-radius: 0px 0px 15px 15px;
+  font-size: 16px;
+  padding: 25px 0px;
+  display: flex;
+  justify-content: space-around;
+}
