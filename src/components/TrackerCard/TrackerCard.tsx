@@ -16,24 +16,24 @@ type DataItem = {
 
 type CardProps = {
   data: DataItem;
+  color: string;
 };
 
-const TrackerCard = ({ data }: CardProps) => {
+const TrackerCard = ({ data, color }: CardProps) => {
+  const colorCard = { color };
   const { title, timeframes } = data;
   const { current: currentHours, previous: previousHours } = timeframes.weekly;
 
   return (
-    <div className="tracker-card">
-      <div className="background">
-        <img src="" />
-      </div>
+    <div className={`tracker-card ${colorCard.color}`}>
+      <div className="background">{/* <img src="" /> */}</div>
       <div className="tracker-infos">
         <div>
           <h2>{title}</h2>
-          <p>{`${currentHours}hrs`}</p>
+          <p className="tracker-hours">{`${currentHours}hrs`}</p>
         </div>
         <div className="tracker-infos__blue">
-          <p>...</p>
+          <p className="dot-cta">...</p>
           <p>{`Last Week - ${previousHours}hrs`}</p>
         </div>
       </div>

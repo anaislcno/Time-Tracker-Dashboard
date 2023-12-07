@@ -1,6 +1,33 @@
 .tracker-card {
-  margin: 0px 20px;
-  /* border-radius: 15px; */
+  margin: 25px 20px;
+  border-radius: 15px;
+  background-color: var(--pale-blue);
+}
+
+/* Card color vars */
+
+.tracker-card.orange {
+  background-color: var(--light-orange);
+}
+
+.tracker-card.blue {
+  background-color: var(--soft-blue);
+}
+
+.tracker-card.red {
+  background-color: var(--light-red);
+}
+
+.tracker-card.green {
+  background-color: var(--lime-green);
+}
+
+.tracker-card.violet {
+  background-color: var(--violet);
+}
+
+.tracker-card.yellow {
+  background-color: var(--yellow);
 }
 
 .tracker-card h2 {
@@ -8,16 +35,38 @@
   font-size: 18px;
 }
 
+/*  */
+
 .tracker-infos {
   background-color: var(--dark-blue);
   border-radius: 15px;
   font-size: 16px;
-  padding: 25px 0px;
+  padding: 30px 0px;
   display: flex;
   justify-content: space-around;
+}
+
+.tracker-hours {
+  margin-top: 10px;
+  font-size: 32px;
+  line-height: 25px;
 }
 
 .tracker-infos__blue {
   color: var(--pale-blue);
   text-align: end;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.dot-cta {
+  font-size: 40px;
+  line-height: 0;
+}
+
+.background {
+  height: 40px;
+  border-radius: 15px 15px 0px 0px;
+  background-color: transparent;
 }
