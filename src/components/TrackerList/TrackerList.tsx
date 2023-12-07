@@ -2,31 +2,60 @@ import data from "./../../data/data.json";
 import TrackerCard from "../TrackerCard/TrackerCard";
 
 enum CategoryColor {
-  orange = "orange",
-  blue = "blue",
-  red = "red",
-  green = "green",
-  violet = "violet",
-  yellow = "yellow",
+  work = "work",
+  play = "play",
+  study = "study",
+  exercise = "exercise",
+  social = "social",
+  selfcare = "selfcare",
   default = "default",
 }
 
 function getColorById(title: string): CategoryColor {
   switch (title) {
     case "Work":
-      return CategoryColor.orange;
+      return CategoryColor.work;
     case "Play":
-      return CategoryColor.blue;
+      return CategoryColor.play;
     case "Study":
-      return CategoryColor.red;
+      return CategoryColor.study;
     case "Exercise":
-      return CategoryColor.green;
+      return CategoryColor.exercise;
     case "Social":
-      return CategoryColor.violet;
+      return CategoryColor.social;
     case "Self Care":
-      return CategoryColor.yellow;
+      return CategoryColor.selfcare;
     default:
       return CategoryColor.default;
+  }
+}
+
+enum CategoryImg {
+  work = "work",
+  play = "play",
+  study = "study",
+  exercise = "exercise",
+  social = "social",
+  selfcare = "selfcare",
+  default = "default",
+}
+
+function getImgById(title: string): CategoryImg {
+  switch (title) {
+    case "Work":
+      return CategoryImg.work;
+    case "Play":
+      return CategoryImg.play;
+    case "Study":
+      return CategoryImg.study;
+    case "Exercise":
+      return CategoryImg.exercise;
+    case "Social":
+      return CategoryImg.social;
+    case "Self Care":
+      return CategoryImg.selfcare;
+    default:
+      return CategoryImg.default;
   }
 }
 
@@ -35,7 +64,12 @@ const TrackerCardList = () => {
   return (
     <div>
       {data.map((item, index) => (
-        <TrackerCard key={index} data={item} color={getColorById(item.title)} />
+        <TrackerCard
+          key={index}
+          data={item}
+          color={getColorById(item.title)}
+          img={getImgById(item.title)}
+        />
       ))}
     </div>
   );

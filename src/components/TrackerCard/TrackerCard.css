@@ -6,27 +6,27 @@
 
 /* Card color vars */
 
-.tracker-card.orange {
+.tracker-card.work {
   background-color: var(--light-orange);
 }
 
-.tracker-card.blue {
+.tracker-card.play {
   background-color: var(--soft-blue);
 }
 
-.tracker-card.red {
+.tracker-card.study {
   background-color: var(--light-red);
 }
 
-.tracker-card.green {
+.tracker-card.exercise {
   background-color: var(--lime-green);
 }
 
-.tracker-card.violet {
+.tracker-card.social {
   background-color: var(--violet);
 }
 
-.tracker-card.yellow {
+.tracker-card.selfcare {
   background-color: var(--yellow);
 }
 
@@ -69,4 +69,33 @@
   height: 40px;
   border-radius: 15px 15px 0px 0px;
   background-color: transparent;
+  background-image: url(../../assets/images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px top -5px;
+}
+
+/* Card img vars */
+
+.background.work {
+  background-image: url(../../assets/images/icon-work.svg);
+}
+
+.background.play {
+  background-image: url(../../assets/images/icon-play.svg);
+}
+
+.background.study {
+  background-image: url(../../assets/images/icon-study.svg);
+}
+
+.background.exercise {
+  background-image: url(../../assets/images/icon-exercise.svg);
+}
+
+.background.social {
+  background-image: url(../../assets/images/icon-social.svg);
+}
+
+.background.selfcare {
+  background-image: url(../../assets/images/icon-self-care.svg);
 }
