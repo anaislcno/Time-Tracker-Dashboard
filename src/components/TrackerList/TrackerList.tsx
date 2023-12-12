@@ -1,5 +1,6 @@
 import data from "./../../data/data.json";
 import TrackerCard from "../TrackerCard/TrackerCard";
+import { useState } from "react";
 
 enum CategoryColor {
   work = "work",
@@ -60,6 +61,8 @@ function getImgById(title: string): CategoryImg {
 }
 
 const TrackerCardList = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [selectedTimeframe, setSelectedTimeframe] = useState("weekly");
   console.log(data);
   return (
     <div>
@@ -69,6 +72,7 @@ const TrackerCardList = () => {
           data={item}
           color={getColorById(item.title)}
           img={getImgById(item.title)}
+          selectedTimeframe={selectedTimeframe}
         />
       ))}
     </div>

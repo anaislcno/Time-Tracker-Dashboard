@@ -1,7 +1,14 @@
 import "./UserCard.css";
 import UserImg from "./../../assets/images/image-jeremy.png";
+import { useState } from "react";
 
 const UserCard = () => {
+  const [selectedTimeframe, setSelectedTimeframe] = useState<string>("weekly");
+  const handleTimeframeChange = (timeframe: string) => {
+    setSelectedTimeframe(timeframe);
+  };
+  console.log(selectedTimeframe);
+
   return (
     <div className="user-container">
       <div className="user-infos">
@@ -12,9 +19,26 @@ const UserCard = () => {
         </div>
       </div>
       <div className="timeline">
-        <h3 className="btn-timeframe">Daily</h3>
-        <h3 className="btn-timeframe">Weekly</h3>
-        <h3 className="btn-timeframe">Montly</h3>
+        <h3
+          className="btn-timeframe"
+          onClick={() => handleTimeframeChange("daily")}
+        >
+          Daily
+        </h3>
+        <h3
+          className={`btn-timeframe ${
+            selectedTimeframe === "weekly" ? "selected" : ""
+          }`}
+          onClick={() => handleTimeframeChange("weekly")}
+        >
+          Weekly
+        </h3>
+        <h3
+          className="btn-timeframe"
+          onClick={() => handleTimeframeChange("monthly")}
+        >
+          Monthly
+        </h3>
       </div>
     </div>
   );

@@ -18,13 +18,17 @@ type CardProps = {
   data: DataItem;
   color: string;
   img: string;
+  selectedTimeframe: string;
 };
 
-const TrackerCard = ({ data, color, img }: CardProps) => {
+const TrackerCard = ({ data, color, img, selectedTimeframe }: CardProps) => {
   const colorCard = { color };
   const imgCard = { img };
   const { title, timeframes } = data;
-  const { current: currentHours, previous: previousHours } = timeframes.weekly;
+  const selectedTimeframeData =
+    timeframes[selectedTimeframe as keyof typeof timeframes];
+  const { current: currentHours, previous: previousHours } =
+    selectedTimeframeData;
 
   return (
     <div className={`tracker-card ${colorCard.color}`}>
