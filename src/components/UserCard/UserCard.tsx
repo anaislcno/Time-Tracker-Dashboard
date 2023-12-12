@@ -12,9 +12,9 @@ const UserCard = () => {
         </div>
       </div>
       <div className="timeline">
-        <h3>Daily</h3>
-        <h3>Weekly</h3>
-        <h3>Montly</h3>
+        <h3 className="btn-timeframe">Daily</h3>
+        <h3 className="btn-timeframe">Weekly</h3>
+        <h3 className="btn-timeframe">Montly</h3>
       </div>
     </div>
   );

@@ -35,7 +35,7 @@ const TrackerCard = ({ data, color, img }: CardProps) => {
           <p className="tracker-hours">{`${currentHours}hrs`}</p>
         </div>
         <div className="tracker-infos__blue">
-          <p className="dot-cta">...</p>
+          <p className="dot-cta">&middot;&middot;&middot;</p>
           <p>{`Last Week - ${previousHours}hrs`}</p>
         </div>
       </div>

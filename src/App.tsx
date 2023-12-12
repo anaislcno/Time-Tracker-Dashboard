@@ -1,4 +1,4 @@
-import Attribution from "./components/Attribution/Attribution";
+// import Attribution from "./components/Attribution/Attribution";
 import Dashboard from "./components/Dashboard/Dashboard";
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
     <>
       <div className="container">
         <Dashboard />
-        <Attribution />
+        {/* <Attribution /> */}
       </div>
     </>
   );

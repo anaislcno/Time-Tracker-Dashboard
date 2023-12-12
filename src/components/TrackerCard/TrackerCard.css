@@ -44,6 +44,15 @@
   padding: 30px 0px;
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
+}
+
+.tracker-infos:hover {
+  background-color: var(--hover-blue);
+}
+
+.tracker-infos:has(.dot-cta:hover) {
+  background-color: var(--dark-blue);
 }
 
 .tracker-hours {
@@ -61,8 +70,12 @@
 }
 
 .dot-cta {
-  font-size: 40px;
+  font-size: 25px;
   line-height: 0;
+}
+
+.dot-cta:hover {
+  color: white;
 }
 
 .background {
@@ -71,7 +84,7 @@
   background-color: transparent;
   background-image: url(../../assets/images/icon-play.svg);
   background-repeat: no-repeat;
-  background-position: right 20px top -5px;
+  background-position: right 20px top -10px;
 }
 
 /* Card img vars */
