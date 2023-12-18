@@ -19,9 +19,16 @@ type CardProps = {
   color: string;
   img: string;
   selectedTimeframe: string;
+  setSelectedTimeframe: (timeframe: string) => void;
 };
 
-const TrackerCard = ({ data, color, img, selectedTimeframe }: CardProps) => {
+const TrackerCard = ({
+  data,
+  color,
+  img,
+  selectedTimeframe,
+  setSelectedTimeframe,
+}: CardProps) => {
   const colorCard = { color };
   const imgCard = { img };
   const { title, timeframes } = data;

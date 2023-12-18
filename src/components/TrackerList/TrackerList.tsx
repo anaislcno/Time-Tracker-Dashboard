@@ -61,7 +61,6 @@ function getImgById(title: string): CategoryImg {
 }
 
 const TrackerCardList = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [selectedTimeframe, setSelectedTimeframe] = useState("weekly");
   console.log(data);
   return (
@@ -73,6 +72,7 @@ const TrackerCardList = () => {
           color={getColorById(item.title)}
           img={getImgById(item.title)}
           selectedTimeframe={selectedTimeframe}
+          setSelectedTimeframe={setSelectedTimeframe}
         />
       ))}
     </div>
