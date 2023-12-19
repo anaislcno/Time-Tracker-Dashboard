@@ -1,5 +1,5 @@
 .tracker-card {
-  margin: 25px 20px;
+  margin: 15px 20px;
   border-radius: 15px;
   background-color: var(--pale-blue);
 }
@@ -41,10 +41,12 @@
   background-color: var(--dark-blue);
   border-radius: 15px;
   font-size: 16px;
-  padding: 30px 0px;
+  padding: 30px 25px;
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 
 .tracker-infos:hover {
@@ -61,12 +63,22 @@
   line-height: 25px;
 }
 
-.tracker-infos__blue {
+.tracker-infos p {
   color: var(--pale-blue);
-  text-align: end;
+}
+
+.tracker-infos__row {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+}
+
+.tracker-infos__column {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
 }
 
 .dot-cta {
@@ -111,4 +123,25 @@
 
 .background.selfcare {
   background-image: url(../../assets/images/icon-self-care.svg);
+}
+
+@media screen and (min-width: 767px) {
+  .tracker-infos {
+    width: 230px;
+    height: 180px;
+    gap: 20px;
+  }
+
+  .tracker-infos__column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: start;
+  }
+
+  .tracker-card {
+    /* Trouver autre chose !!! */
+    height: 200px;
+    margin: 15px 20px;
+  }
 }

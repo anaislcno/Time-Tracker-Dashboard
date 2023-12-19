@@ -1,0 +1,13 @@
+.tracker-list {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 767px) {
+  .tracker-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    gap: 15px;
+  }
+}

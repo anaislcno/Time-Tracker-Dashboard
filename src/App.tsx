@@ -4,10 +4,10 @@ import Dashboard from "./components/Dashboard/Dashboard";
 function App() {
   return (
     <>
-      <div className="container">
+      <main>
         <Dashboard />
         {/* <Attribution /> */}
-      </div>
+      </main>
     </>
   );
 }

@@ -20,27 +20,18 @@ const UserCard = ({
       </div>
       <div className="timeline">
         <h3
-          className={`btn-timeframe ${
-            selectedTimeframe === "daily" ? "selected" : ""
-          }`}
-          onClick={() => handleTimeframeChange("daily")}
-        >
+          className={`btn-timeframe ${selectedTimeframe === "daily" ? "selected" : ""}`}
+          onClick={() => handleTimeframeChange("daily")}>
           Daily
         </h3>
         <h3
-          className={`btn-timeframe ${
-            selectedTimeframe === "weekly" ? "selected" : ""
-          }`}
-          onClick={() => handleTimeframeChange("weekly")}
-        >
+          className={`btn-timeframe ${selectedTimeframe === "weekly" ? "selected" : ""}`}
+          onClick={() => handleTimeframeChange("weekly")}>
           Weekly
         </h3>
         <h3
-          className={`btn-timeframe ${
-            selectedTimeframe === "monthly" ? "selected" : ""
-          }`}
-          onClick={() => handleTimeframeChange("monthly")}
-        >
+          className={`btn-timeframe ${selectedTimeframe === "monthly" ? "selected" : ""}`}
+          onClick={() => handleTimeframeChange("monthly")}>
           Monthly
         </h3>
       </div>

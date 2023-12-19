@@ -1,5 +1,5 @@
 .user-container {
-  margin: 50px 20px 5px 20px;
+  margin: 50px 20px 15px 20px;
   border-radius: 15px;
   background-color: var(--dark-blue);
 }
@@ -49,4 +49,29 @@
 
 .selected {
   color: white;
+}
+
+@media screen and (min-width: 767px) {
+  .user-container {
+    max-width: 230px;
+  }
+  .user-infos {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 30px 70px 30px;
+    gap: 30px;
+  }
+
+  .user-infos__text h1 {
+    font-size: 36px;
+  }
+
+  .timeline {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .btn-timeframe {
+    margin-bottom: 15px;
+  }
 }

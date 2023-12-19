@@ -1,6 +1,6 @@
 import data from "./../../data/data.json";
 import TrackerCard from "../TrackerCard/TrackerCard";
-// import { useState } from "react";
+import "./TrackerList.css";
 
 enum CategoryColor {
   work = "work",
@@ -62,7 +62,7 @@ function getImgById(title: string): CategoryImg {
 
 const TrackerList = ({ selectedTimeframe }: { selectedTimeframe: string }) => {
   return (
-    <div>
+    <div className="tracker-list">
       {data.map((item, index) => (
         <TrackerCard
           key={index}

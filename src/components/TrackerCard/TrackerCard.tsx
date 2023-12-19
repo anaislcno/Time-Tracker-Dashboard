@@ -25,22 +25,20 @@ const TrackerCard = ({ data, color, img, selectedTimeframe }: CardProps) => {
   const colorCard = { color };
   const imgCard = { img };
   const { title, timeframes } = data;
-  const selectedTimeframeData =
-    timeframes[selectedTimeframe as keyof typeof timeframes];
+  const selectedTimeframeData = timeframes[selectedTimeframe as keyof typeof timeframes];
 
-  const { current: currentHours, previous: previousHours } =
-    selectedTimeframeData;
+  const { current: currentHours, previous: previousHours } = selectedTimeframeData;
 
   return (
     <div className={`tracker-card ${colorCard.color}`}>
       <div className={`background ${imgCard.img}`}></div>
       <div className="tracker-infos">
-        <div>
+        <div className="tracker-infos__row">
           <h2>{title}</h2>
-          <p className="tracker-hours">{`${currentHours}hrs`}</p>
-        </div>
-        <div className="tracker-infos__blue">
           <p className="dot-cta">&middot;&middot;&middot;</p>
+        </div>
+        <div className="tracker-infos__column">
+          <h3 className="tracker-hours">{`${currentHours}hrs`}</h3>
           <p>{`Last Week - ${previousHours}hrs`}</p>
         </div>
       </div>
