@@ -40,4 +40,13 @@
 
 .btn-timeframe {
   cursor: pointer;
+  color: var(--pale-blue);
+}
+
+.btn-timeframe:hover {
+  color: white;
+}
+
+.selected {
+  color: white;
 }

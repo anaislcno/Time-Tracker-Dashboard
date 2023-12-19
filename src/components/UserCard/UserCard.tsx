@@ -3,9 +3,12 @@ import UserImg from "./../../assets/images/image-jeremy.png";
 
 const UserCard = ({
   handleTimeframeChange,
+  selectedTimeframe,
 }: {
   handleTimeframeChange: (timeframe: string) => void;
+  selectedTimeframe: string;
 }) => {
+  console.log(selectedTimeframe);
   return (
     <div className="user-container">
       <div className="user-infos">
@@ -17,19 +20,25 @@ const UserCard = ({
       </div>
       <div className="timeline">
         <h3
-          className="btn-timeframe"
+          className={`btn-timeframe ${
+            selectedTimeframe === "daily" ? "selected" : ""
+          }`}
           onClick={() => handleTimeframeChange("daily")}
         >
           Daily
         </h3>
         <h3
-          className="btn-timeframe"
+          className={`btn-timeframe ${
+            selectedTimeframe === "weekly" ? "selected" : ""
+          }`}
           onClick={() => handleTimeframeChange("weekly")}
         >
           Weekly
         </h3>
         <h3
-          className="btn-timeframe"
+          className={`btn-timeframe ${
+            selectedTimeframe === "monthly" ? "selected" : ""
+          }`}
           onClick={() => handleTimeframeChange("monthly")}
         >
           Monthly

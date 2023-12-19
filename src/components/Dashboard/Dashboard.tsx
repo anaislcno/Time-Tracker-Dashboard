@@ -11,7 +11,10 @@ const Dashboard = () => {
 
   return (
     <div>
-      <UserCard handleTimeframeChange={handleTimeframeChange} />
+      <UserCard
+        handleTimeframeChange={handleTimeframeChange}
+        selectedTimeframe={selectedTimeframe}
+      />
       <TrackerList selectedTimeframe={selectedTimeframe} />
     </div>
   );
