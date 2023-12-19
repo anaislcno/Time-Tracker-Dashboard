@@ -1,14 +1,11 @@
 import "./UserCard.css";
 import UserImg from "./../../assets/images/image-jeremy.png";
-import { useState } from "react";
 
-const UserCard = () => {
-  const [selectedTimeframe, setSelectedTimeframe] = useState<string>("weekly");
-  const handleTimeframeChange = (timeframe: string) => {
-    setSelectedTimeframe(timeframe);
-  };
-  console.log(selectedTimeframe);
-
+const UserCard = ({
+  handleTimeframeChange,
+}: {
+  handleTimeframeChange: (timeframe: string) => void;
+}) => {
   return (
     <div className="user-container">
       <div className="user-infos">
@@ -26,9 +23,7 @@ const UserCard = () => {
           Daily
         </h3>
         <h3
-          className={`btn-timeframe ${
-            selectedTimeframe === "weekly" ? "selected" : ""
-          }`}
+          className="btn-timeframe"
           onClick={() => handleTimeframeChange("weekly")}
         >
           Weekly
