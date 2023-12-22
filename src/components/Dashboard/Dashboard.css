@@ -6,5 +6,8 @@
 @media screen and (min-width: 767px) {
   .container {
     flex-direction: row;
+    margin: 0px auto;
+    width: 80vw;
+    justify-content: center;
   }
 }
